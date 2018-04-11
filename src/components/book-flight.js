@@ -9,101 +9,101 @@ class BookFligh extends Component {
 		return (
 		<Main>
 
-        <div class="container-fluid">
+        <div className="container-fluid">
             <Header />
         </div>
 
-        <div class="book-flight">
-            <div class="book-flight-container">
-                <div class="custom_wrapper_right">
+        <div className="book-flight">
+            <div className="book-flight-container">
+                <div className="custom_wrapper_right">
                     <form action="">
-                        <div class="blue-form">
-                            <div class="inputs">
-                                <div class="input-container full">
-                                    <label for="">Flying from</label>
-                                    <input type="text" name="" id="" placeholder="Flying from" value="Paris, Charles de Gaulle Airport" class="location" />
+                        <div className="blue-form">
+                            <div className="inputs">
+                                <div className="input-container full">
+                                    <label htmlFor="">Flying from</label>
+                                    <input type="text" name="" id="" placeholder="Flying from" defaultValue="Paris, Charles de Gaulle Airport" className="location" />
                                 </div>
-                                <div class="input-container full">
-                                    <label for="">Flying to</label>
-                                    <input type="text" name="" id="" placeholder="Flying to" value="San Francisco, International Airport"  class="location" />
+                                <div className="input-container full">
+                                    <label htmlFor="">Flying to</label>
+                                    <input type="text" name="" id="" placeholder="Flying to" defaultValue="San Francisco, International Airport"  className="location" />
                                 </div>
-                                <div class="multi-input">
-                                    <div class="input-container">
-                                        <label for="">Departing</label>
-                                        <input type="text" name="" id="" class="date-picker depart" />
+                                <div className="multi-input">
+                                    <div className="input-container">
+                                        <label htmlFor="">Departing</label>
+                                        <input type="text" name="" id="" className="date-picker depart" />
                                     </div>
-                                    <div class="input-container">
-                                        <label for="">Returning</label>
-                                        <input type="text" name="" id="" class="date-picker return" />
+                                    <div className="input-container">
+                                        <label htmlFor="">Returning</label>
+                                        <input type="text" name="" id="" className="date-picker return" />
                                     </div>
-                                    <div class="input-container">
+                                    <div className="input-container">
                                         <input type="checkbox" name="" id="one-way" />
-                                        <label for="one-way">Returning</label>
+                                        <label htmlFor="one-way">Returning</label>
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
-                        <div class="rought_time">
-                            <div class="flight_time owl-carousel">
-                                <div class="item flight">
-                                    <div class="departure">
+                        <div className="rought_time">
+                            <div className="flight_time owl-carousel">
+                                <div className="item flight">
+                                    <div className="departure">
                                         <span></span>
-                                        <p class="label">Departure</p>
-                                        <p class="time">10:40 AM</p>
+                                        <p className="label">Departure</p>
+                                        <p className="time">10:40 AM</p>
                                     </div>
-                                    <div class="arrival">
+                                    <div className="arrival">
                                         <span></span>
-                                        <p class="label">Arrival</p>
-                                        <p class="time">12:55 AM</p>
+                                        <p className="label">Arrival</p>
+                                        <p className="time">12:55 AM</p>
                                     </div>
-                                    <div class="duration">
-                                        <p class="label">Flight time: 2h. 15min., same day arriwal</p>
+                                    <div className="duration">
+                                        <p className="label">Flight time: 2h. 15min., same day arriwal</p>
                                     </div>
                                 </div>
-                                <div class="item flight">
-                                    <div class="departure">
+                                <div className="item flight">
+                                    <div className="departure">
                                         <span></span>
-                                        <p class="label">Departure</p>
-                                        <p class="time">11:40 AM</p>
+                                        <p className="label">Departure</p>
+                                        <p className="time">11:40 AM</p>
                                     </div>
-                                    <div class="arrival">
+                                    <div className="arrival">
                                         <span></span>
-                                        <p class="label">Arrival</p>
-                                        <p class="time">01:55 AM</p>
+                                        <p className="label">Arrival</p>
+                                        <p className="time">01:55 AM</p>
                                     </div>
-                                    <div class="duration">
-                                        <p class="label">Flight time: 2h. 15min., same day arriwal</p>
+                                    <div className="duration">
+                                        <p className="label">Flight time: 2h. 15min., same day arriwal</p>
                                     </div>
                                 </div>
-                                <div class="item flight">
-                                    <div class="departure">
+                                <div className="item flight">
+                                    <div className="departure">
                                         <span></span>
-                                        <p class="label">Departure</p>
-                                        <p class="time">12:40 AM</p>
+                                        <p className="label">Departure</p>
+                                        <p className="time">12:40 AM</p>
                                     </div>
-                                    <div class="arrival">
+                                    <div className="arrival">
                                         <span></span>
-                                        <p class="label">Arrival</p>
-                                        <p class="time">02:55 AM</p>
+                                        <p className="label">Arrival</p>
+                                        <p className="time">02:55 AM</p>
                                     </div>
-                                    <div class="duration">
-                                        <p class="label">Flight time: 2h. 15min., same day arriwal</p>
+                                    <div className="duration">
+                                        <p className="label">Flight time: 2h. 15min., same day arriwal</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="class-n-price">
-                                <div class="passenger">
-                                    <div class="input-container select">
-                                        <label for="">Class</label>
+                            <div className="class-n-price">
+                                <div className="passenger">
+                                    <div className="input-container select">
+                                        <label htmlFor="">Class</label>
                                         <select>
                                             <option value="economy">Economy</option>
                                             <option value="economy">Economy</option>
                                             <option value="economy">Economy</option>
                                         </select>
                                     </div>
-                                    <div class="input-container ">
-                                        <label for="">Passenger</label>
+                                    <div className="input-container ">
+                                        <label htmlFor="">Passenger</label>
                                         <select>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -114,32 +114,32 @@ class BookFligh extends Component {
                                         </select>
                                     </div>
                                 </div>
-                                <div class="price">
+                                <div className="price">
                                     <h3>&euro;159.99</h3>
                                     <p>/ per person</p>
                                 </div>
-                                <div class="has-button">
-                                    <input type="submit" value="Book this flight" class="text-uppercase button type-2 round-5 no-margin no-shadow green-3" styles="height: 60px;" />
+                                <div className="has-button">
+                                    <input type="submit" value="Book this flight" className="text-uppercase button type-2 round-5 no-margin no-shadow green-3" styles="height: 60px;" />
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
 
-                <div class="custom_wrapper_left">
-                    <div class="city_name">
-                        <div class="close_btn"><img src="images/close.png" /></div>
+                <div className="custom_wrapper_left">
+                    <div className="city_name">
+                        <div className="close_btn"><img src="images/close.png" /></div>
 
-                        <div class="city_images">
-                            <div class="first_third"><img src="images/paris.png" class="b-radius" />
-                                <div class="containt">
+                        <div className="city_images">
+                            <div className="first_third"><img src="images/paris.png" className="b-radius" />
+                                <div className="containt">
                                     <h2>PARIS</h2>
                                     <p>Charles de Gaulle</p>
                                 </div>
                             </div>
-                            <div class="first_second"><img src="images/arrow.png" class="center_img" /></div>
-                            <div class="first_third"><img src="images/san fransiso.png" class="b-radius" />
-                                <div class="containt">
+                            <div className="first_second"><img src="images/arrow.png" className="center_img" /></div>
+                            <div className="first_third"><img src="images/san fransiso.png" className="b-radius" />
+                                <div className="containt">
                                     <h2>SAN FRANCISCO</h2>
                                     <p>International Airport    </p>
                                 </div>

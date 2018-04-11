@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 
-import Main from './layout/main';
+import MainCustomWrap from './layout/main-custom-wrap';
 import Header from './layout/header';
 import FooterOther from './layout/footer-other';
 
 class Funds extends Component {
 	render() {
 		return (
-		<Main>
+		<MainCustomWrap customClass="funds">
 
-        <div class="container-fluid">
+        <div className="container-fluid">
             <Header />
 
         </div>
-        <div class=" container" >
-                <div class="gap"></div><br/><div class="gap"></div>
-            <div class="text-right">
-                <a href="#" class="button type-1 white round-5"> &nbsp;<i class="fa fa-plus" aria-hidden="true"></i> Add Deposit</a>
+        <div className=" container" >
+                <div className="gap"></div><br/><div className="gap"></div>
+            <div className="text-right">
+                <a href="#" className="button type-1 white round-5"> &nbsp;<i className="fa fa-plus" aria-hidden="true"></i> Add Deposit</a>
             </div>
             
-            <div class="">
-                <div class="col-sm-6 text-center hide-border-sm funds-price-container" styles="border-right: 1px solid #696969;">
-                    <div class="col-xs-7 text-left">
-                        <p class="label-funds" >Available Balance</p>
+            <div className="">
+                <div className="col-sm-6 text-center hide-border-sm funds-price-container" styles="border-right: 1px solid #696969;">
+                    <div className="col-xs-7 text-left">
+                        <p className="label-funds" >Available Balance</p>
                     </div>
-                    <div class="col-xs-5 text-right  no-padding">
-                        <div class="input select-1  ">
+                    <div className="col-xs-5 text-right  no-padding">
+                        <div className="input select-1  ">
                             <select name="" id="" >
                                 <option value="">$ Dollar</option>
                                 <option value="">$ Dollar</option>
@@ -33,25 +33,25 @@ class Funds extends Component {
                             </select>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div className="clearfix"></div>
                     
-                    <div class="info-container">
+                    <div className="info-container">
                         <p>337<sup>$</sup></p>
                         
                     </div>
                     <div>
-                        <a href="#" class="button type-2 blue "> Withdraw!</a>
+                        <a href="#" className="button type-2 blue "> Withdraw!</a>
                     </div>
-                    <div class="clearfix gap sm-hidden" styles="margin-top: 100px;"></div>
+                    <div className="clearfix gap sm-hidden" styles="margin-top: 100px;"></div>
                 </div>
-                <div class="gap">
+                <div className="gap">
                 </div>
-                <div class="col-sm-6 transaction-container">
-                    <div class="col-xs-7 text-left no-padding">
-                        <p class="label-funds">Transactions</p>
+                <div className="col-sm-6 transaction-container">
+                    <div className="col-xs-7 text-left no-padding">
+                        <p className="label-funds">Transactions</p>
                     </div>
-                    <div class="col-xs-5 text-right no-padding">
-                        <div class="input select-1  ">
+                    <div className="col-xs-5 text-right no-padding">
+                        <div className="input select-1  ">
                             <select name="" id="" styles=" border-bottom: 1px solid #888;">
                                 <option value="">January</option>
                                 <option value="">February</option>
@@ -67,44 +67,44 @@ class Funds extends Component {
                             </select>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="gap clearfix" styles="margin-top: 24px;"></div>
-                    <div class="card-layout-1 clearfix transaction-card completed" >
-                        <div class="fund-detail pull-left">
+                    <div className="clearfix"></div>
+                    <div className="gap clearfix" styles="margin-top: 24px;"></div>
+                    <div className="card-layout-1 clearfix transaction-card completed" >
+                        <div className="fund-detail pull-left">
                             <p> Project completed</p>
                             <span>
                                 Sydney Gift
                             </span>
                         </div>
-                        <div class="fund-detail-amount pull-right ">
+                        <div className="fund-detail-amount pull-right ">
                             <p>100</p>
                             <span>
                                 USD
                             </span>
                         </div>
                     </div>
-                    <div class="card-layout-1 clearfix transaction-card sent" >
-                        <div class="fund-detail pull-left">
+                    <div className="card-layout-1 clearfix transaction-card sent" >
+                        <div className="fund-detail pull-left">
                             <p> Project completed</p>
                             <span>
                                 Sydney Gift
                             </span>
                         </div>
-                        <div class="fund-detail-amount pull-right">
+                        <div className="fund-detail-amount pull-right">
                             <p>219</p>
                             <span>
                                 USD
                             </span>
                         </div>
                     </div>
-                    <div class="card-layout-1 clearfix transaction-card withdraw" >
-                        <div class="fund-detail pull-left">
+                    <div className="card-layout-1 clearfix transaction-card withdraw" >
+                        <div className="fund-detail pull-left">
                             <p> Project completed</p>
                             <span>
                                 Sydney Gift
                             </span>
                         </div>
-                        <div class="fund-detail-amount pull-right">
+                        <div className="fund-detail-amount pull-right">
                             <p>30</p>
                             <span>
                                 USD
@@ -112,16 +112,16 @@ class Funds extends Component {
                         </div>
                     </div>
                     <br/>
-                    <p class="text-center loadmore">Load more </p>
+                    <p className="text-center loadmore">Load more </p>
                 </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="clearfix gap sm-hidden" styles="margin-top: 118px;"></div>
+            <div className="clearfix"></div>
+            <div className="clearfix gap sm-hidden" styles="margin-top: 118px;"></div>
         </div>
 
         <FooterOther />
 
-    </Main>
+    </MainCustomWrap>
 		);
 	}
 }

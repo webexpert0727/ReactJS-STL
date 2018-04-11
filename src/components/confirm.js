@@ -9,71 +9,71 @@ class Confirm extends Component {
 		return (
 		<Main>
 
-        <div class="container-fluid">
+        <div className="container-fluid">
             <Header />
 
         </div>
-        <div class="container-fluid">
-            <div class="clearfix gap sm-hidden" styles="margin-bottom: -4px;"></div>
-            <div class="success-alert text-center" styles="overflow: hidden;">
+        <div className="container-fluid">
+            <div className="clearfix gap sm-hidden" styles="margin-bottom: -4px;"></div>
+            <div className="success-alert text-center" styles="overflow: hidden;">
                 <div>
-                    <img src="images/confirm-icon.png" alt="" class="img-responsive center-block" />
+                    <img src="images/confirm-icon.png" alt="" className="img-responsive center-block" />
                 </div>
                 <br/><br/>
-                <div class="sucesss-title">
+                <div className="sucesss-title">
                     <h2> Order Confirmed </h2>
-                    <span class="shadow text-uppercase">Successfull</span>
+                    <span className="shadow text-uppercase">Successfull</span>
                 </div>
             </div>
-            <div class="table table-md confirmation-table">
-                <div class="table-head">
-                    <div class="table-row hidden-sm hidden-xs ">
-                        <div class="table-cell status">
+            <div className="table table-md confirmation-table">
+                <div className="table-head">
+                    <div className="table-row hidden-sm hidden-xs ">
+                        <div className="table-cell status">
                             <p> Purchased</p>
                         </div>
-                        <div class="table-cell product-image">
+                        <div className="table-cell product-image">
                             <p>&nbsp;</p>
                         </div>
-                        <div class="table-cell product-name">
+                        <div className="table-cell product-name">
                             <p>Product Name</p>
                         </div>
-                        <div class="table-cell product-price">
+                        <div className="table-cell product-price">
                             <p>Price</p>
                         </div>
-                        <div class="table-cell order-number">
+                        <div className="table-cell order-number">
                             <p>Order Number</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="table-body">
-                    <div class="table-row card-layout-1  ">
-                        <div class="table-cell v-middel">
+                <div className="table-body">
+                    <div className="table-row card-layout-1  ">
+                        <div className="table-cell v-middel">
                             <p> </p>
                         </div>
-                        <div data-title="Product Name" class="table-cell v-middel product-image">
+                        <div data-title="Product Name" className="table-cell v-middel product-image">
                             <img src="images/h8_natural_buymodule.png" alt="" />
                         </div>
-                        <div data-title=" " class="table-cell v-middel product-name">
+                        <div data-title=" " className="table-cell v-middel product-name">
                             <p>Bang &amp; Olufsen <br/> BeoPlay H8</p>
                         </div>
-                        <div data-title="Price" class="table-cell v-middel product-price">
+                        <div data-title="Price" className="table-cell v-middel product-price">
                             <p><sup>$ </sup>337 <sup>00</sup></p>
                         </div>
-                        <div data-title="Order Number" class="table-cell v-middel order-number">
+                        <div data-title="Order Number" className="table-cell v-middel order-number">
                             <p>AB1234568790123</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-right confirmation-total">
+            <div className="text-right confirmation-total">
                 <div styles="padding: 20px;">
-                    <p><span class="text-uppercase">Total: &nbsp;&nbsp;&nbsp;</span><sup>$ </sup> 337 <sup>00</sup></p>
+                    <p><span className="text-uppercase">Total: &nbsp;&nbsp;&nbsp;</span><sup>$ </sup> 337 <sup>00</sup></p>
                 </div>
             </div>
-            <div class="return-home-container text-center">
+            <div className="return-home-container text-center">
                 <p>Thank you to use our service! We are sending the notification email shortly.</p>
-                <a href="index.html" class="text-center button type-2 blue">Home Page</a>
+                <a href="index.html" className="text-center button type-2 blue">Home Page</a>
             </div>
         </div>
 

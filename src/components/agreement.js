@@ -8,16 +8,16 @@ import FooterOther from './layout/footer-other';
 class Agreement extends Component {
 	render() {
 		return (
-		<div class="main off-white-bg no-banner">
-        <div class="container-fluid">
+		<div className="main off-white-bg no-banner">
+        <div className="container-fluid">
             <HeaderWhite />
         </div>
-        <div class="container-fluid">
-            <div class="gap clearfix" styles="margin-bottom: 3px"></div>
-            <div class="sm-gap-80 text-center-xs" styles="padding: 0 50px;"><h3 class="plain-heading-2" styles="margin-top: 23px; margin-bottom: 0px;"> Agreement </h3></div>
+        <div className="container-fluid">
+            <div className="gap clearfix" styles="margin-bottom: 3px"></div>
+            <div className="sm-gap-80 text-center-xs" styles="padding: 0 50px;"><h3 className="plain-heading-2" styles="margin-top: 23px; margin-bottom: 0px;"> Agreement </h3></div>
             <br/>
-            <div class="white-bg round5">
-                <div class="agreement-text">
+            <div className="white-bg round5">
+                <div className="agreement-text">
                     <p>
                         The standard Lorem Ipsum passage, used since the 1500s 
                     </p>
@@ -39,9 +39,9 @@ class Agreement extends Component {
                 </div>
             </div>
             <br/>
-            <div class="text-right text-center-xs agreement-btn">
-                <a href="#" class="button type-1 grey text-uppercase">Decline</a>
-                <a href="#" class="button type-2 green text-uppercase"> agree</a>
+            <div className="text-right text-center-xs agreement-btn">
+                <a href="#" className="button type-1 grey text-uppercase">Decline</a>
+                <a href="#" className="button type-2 green text-uppercase"> agree</a>
             </div>
         </div>
         <FooterOther />

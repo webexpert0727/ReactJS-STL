@@ -1,71 +1,71 @@
 import React, { Component } from 'react';
 
-import Main from './layout/main';
+import MainCustomWrap from './layout/main-custom-wrap';
 import Header from './layout/header';
 
 class Signup extends Component {
 	render() {
 		return (
-		<Main>
+            <MainCustomWrap customClass="login signup">
 
-        <div class="container-fluid">
-            <header class="menu-containter no-bg">
-                    <div class="logo">
+        <div className="container-fluid">
+            <header className="menu-containter no-bg">
+                    <div className="logo">
                         <a href="index.html">
                             <img src="images/logo.png" alt="sofia" /> </a>
                     </div>
                 </header>
         </div>
-        <div class="container">
-            <div class="form-type-1 form-container">
-                <div class="form">
+        <div className="container">
+            <div className="form-type-1 form-container">
+                <div className="form">
                     <form>
-                        <div class="title form-title text-center">
+                        <div className="title form-title text-center">
                             <p>
                                 Sign Up
                             </p>
-                            <div class="social-signup">
-                                <a href="#" class="social-button">
+                            <div className="social-signup">
+                                <a href="#" className="social-button">
                                     <img src="images/icons8-twitter-w.png" />
                                 </a>
-                                <a href="#" class="social-button">
+                                <a href="#" className="social-button">
                                     <img src="images/icons8-facebook-w.png" />
                                 </a>
                             </div>
                         </div>
-                        <div class="input">
+                        <div className="input">
                             <i>
-                                <img class="icon" src="images/icons/icons8-human-head-26.png" />
+                                <img className="icon" src="images/icons/icons8-human-head-26.png" />
                             </i>
-                            <input type="text" class="" placeholder="Username..." />
+                            <input type="text" className="" placeholder="Username..." />
                         </div>
-                        <div class="input">
+                        <div className="input">
                             <i>
-                                <img class="icon" src="images/icons/icons8-envelope-24.png" />
+                                <img className="icon" src="images/icons/icons8-envelope-24.png" />
                             </i>
-                            <input type="email" class="" placeholder="Email..." />
+                            <input type="email" className="" placeholder="Email..." />
                         </div>
-                        <div class="input">
+                        <div className="input">
                             <i>
-                                <img class="icon" src="images/icons/icons8-lock-24.png" />
+                                <img className="icon" src="images/icons/icons8-lock-24.png" />
                             </i>
-                            <input type="password" class="" placeholder="Password..." />
+                            <input type="password" className="" placeholder="Password..." />
                         </div>
-                        <div class="input">
+                        <div className="input">
                             <i>
-                                <img class="icon" src="images/icons/icons8-gift-24.png" />
+                                <img className="icon" src="images/icons/icons8-gift-24.png" />
                             </i>
-                            <input type="text" class="" placeholder="Birthday..." />
+                            <input type="text" className="" placeholder="Birthday..." />
                         </div>
-                        <div class="text-center">
-                            <input type="submit" value="Get Started" class="text-uppercase hollow-button" styles="margin-top: 0;" />
+                        <div className="text-center">
+                            <input type="submit" value="Get Started" className="text-uppercase hollow-button" styles="margin-top: 0;" />
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-    </Main>
+    </MainCustomWrap>
 		);
 	}
 }

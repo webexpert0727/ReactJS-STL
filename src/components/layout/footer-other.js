@@ -4,9 +4,9 @@ class FooterOther extends Component {
 	render() {
 		return (
 		 <footer>
-            <div class="container footer-container">
-                <div class="col-sm-8">
-                    <div class="footer-nav">
+            <div className="container footer-container">
+                <div className="col-sm-8">
+                    <div className="footer-nav">
                         <ul>
                             <li>
                                 <img src="images/profile.png" />
@@ -27,8 +27,8 @@ class FooterOther extends Component {
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="copyright text-right">
+                <div className="col-sm-4">
+                    <div className="copyright text-right">
                         <p>&copy; 2017, made by NagyAppDev</p>
                     </div>
                 </div>

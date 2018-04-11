@@ -3,23 +3,23 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-         <header class="menu-containter">
-            <div class="logo">
+         <header className="menu-containter">
+            <div className="logo">
                 <a href="/">
                     <img src="images/logo.png" alt="Share The Load" /> </a>
             </div>
-            <div class="menu">
+            <div className="menu">
                 <nav>
-                    <div class="hidden-md hidden-lg">
-                        <a href="javascript:void(0)" class="menu-list-toggle">
+                    <div className="hidden-md hidden-lg">
+                        <a href="javascript:void(0)" className="menu-list-toggle">
                             <span></span>
                             <span></span>
                             <span></span>
                         </a>
                     </div>
-                    <ul class="menu-list">
+                    <ul className="menu-list">
                         <li>
-                            <a href="/" class="active">home</a>
+                            <a href="/" className="active">home</a>
                         </li>
                         <li>
                             <a href="/shop">Shop</a>
@@ -42,14 +42,14 @@ class Header extends Component {
                         <li>
                             <a href="/contact-us">Contact</a>
                         </li>
-                        <li class="bottom-btn hidden-lg hidden-md">
+                        <li className="bottom-btn hidden-lg hidden-md">
                             <div>
                                 <a href="/login">
-                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    <i className="fa fa-sign-in" aria-hidden="true"></i>
                                     Login
                                 </a>
                                 <a href="/setting">
-                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    <i className="fa fa-cog" aria-hidden="true"></i>
                                     Setting
                                 </a>
                             </div>

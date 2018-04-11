@@ -9,11 +9,11 @@ class Setting extends Component {
 		return (
 		<Main>
 
-        <div class="container-fluid">
+        <div className="container-fluid">
             <Header />
 
-            <div class="banner banner-profile banner-small no-text-banner banner-cus-1-xs">
-                <div class="text text-center">
+            <div className="banner banner-profile banner-small no-text-banner banner-cus-1-xs">
+                <div className="text text-center">
                     <h3>
                         
                     </h3>
@@ -24,52 +24,52 @@ class Setting extends Component {
             </div>
 
         </div>
-        <div class="">
-            <div class="profile image">
-                <input type="file" name="" id="" class="profile-image edit" />
-                <img src="images/team-3.png" alt="" class="img-circle img-responsive center-block " width="140px" height="140px" />
+        <div className="">
+            <div className="profile image">
+                <input type="file" name="" id="" className="profile-image edit" />
+                <img src="images/team-3.png" alt="" className="img-circle img-responsive center-block " width="140px" height="140px" />
             </div>
-            <div class="card-layout-1 text-center card-margin-style-2">
-                <div class="small-container">
-                    <div class="gap clearfix" styles="margin-top: 15px;"></div>
-                    <div class="input profile-input" styles="width: 340px; max-width: 100%;">
-                        <span class="edit-input" styles=" display: none;" ></span>
-                        <input type="text" name="" readonly="readonly" class="name text-center" id="" value="Jessica Parker" />
-                        <input type="text" name="" id="" readonly="readonly" class="profile-location text-center" value="London, England" />
+            <div className="card-layout-1 text-center card-margin-style-2">
+                <div className="small-container">
+                    <div className="gap clearfix" styles="margin-top: 15px;"></div>
+                    <div className="input profile-input" styles="width: 340px; max-width: 100%;">
+                        <span className="edit-input" styles=" display: none;" ></span>
+                        <input type="text" name="" readOnly={true} className="name text-center" id="" value="Jessica Parker" />
+                        <input type="text" name="" id="" readOnly={true} className="profile-location text-center" value="London, England" />
                     </div>
-                    <div class="input profile-input">
-                        <span class="edit-input" styles=" display: none;" ></span>
-                        <textarea name="" id="" cols="30" rows="4" class="info text-center" readonly="readonly">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <div className="input profile-input">
+                        <span className="edit-input" styles=" display: none;" ></span>
+                        <textarea name="" id="" cols="30" rows="4" className="info text-center" readOnly={true}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </textarea>
                     </div>
-                    <div class="gap clearfix hidden-xs" styles="margin-top:37px;"></div>
+                    <div className="gap clearfix hidden-xs" styles="margin-top:37px;"></div>
                 </div>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
                 
-                <div class="form profile-detail-form container"><br/>
-                    <div class="col-md-4  input ">
-                        <span class="edit-input" styles="right: 40px; display: none;"></span>
-                        <label for="">Phone Verificaiton</label>
-                        <input type="text" name="" id="" value="+ 12 34567890123" readonly="readonly" />
+                <div className="form profile-detail-form container"><br/>
+                    <div className="col-md-4  input ">
+                        <span className="edit-input" styles="right: 40px; display: none;"></span>
+                        <label htmlFor="">Phone Verificaiton</label>
+                        <input type="text" name="" id="" defaultValue="+ 12 34567890123" readOnly={true} />
                     </div>
-                    <div class="col-md-4  input email">
-                        <span class="edit-input" styles="right: 40px; display: none;"></span>
-                        <label for="">Email Verificaiton</label>
-                        <input type="text" name="" id="" placeholder="Type here..." readonly="readonly" />
+                    <div className="col-md-4  input email">
+                        <span className="edit-input" styles="right: 40px; display: none;"></span>
+                        <label htmlFor="">Email Verificaiton</label>
+                        <input type="text" name="" id="" placeholder="Type here..." readOnly={true} />
                     </div>
-                    <div class="col-md-4  input ">
-                        <span class="edit-input" styles="right: 40px; display: none;"></span>
-                        <label for="">Password</label>
-                        <input type="text" name="" id="" placeholder="*************" readonly="readonly" />
+                    <div className="col-md-4  input ">
+                        <span className="edit-input" styles="right: 40px; display: none;"></span>
+                        <label htmlFor="">Password</label>
+                        <input type="text" name="" id="" placeholder="*************" readOnly={true} />
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="text-center">
-                        <div class="gap clearfix"></div>
-                        <div class="gap clearfix hidden-xs" styles="margin-top:37px;"></div>
-                            <a href="javascript:void(0)" id="edit-profile" class="button type-2 green ">Edit profile</a>
+                    <div className="clearfix"></div>
+                    <div className="text-center">
+                        <div className="gap clearfix"></div>
+                        <div className="gap clearfix hidden-xs" styles="margin-top:37px;"></div>
+                            <a href="javascript:void(0)" id="edit-profile" className="button type-2 green ">Edit profile</a>
                             
-                        <div class="gap clearfix"></div>
-                        <div class="gap clearfix hidden-xs" styles="margin-bottom:20px;"></div>
+                        <div className="gap clearfix"></div>
+                        <div className="gap clearfix hidden-xs" styles="margin-bottom:20px;"></div>
                     </div>
                 </div>
 

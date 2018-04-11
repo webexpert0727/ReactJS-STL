@@ -650,12 +650,15 @@ input[type="checkbox"].check-box ~ label{
     background-size: 17px;
     background-repeat: no-repeat;
 }
-body.funds{
+.funds{
     background-image: url("../images/funds-bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.funds .main {
+    background: rgba(0,0,0,.5);min-height: inherit;
 }
 .off-white-bg{
     background: #f7f8fa;
@@ -1422,11 +1425,11 @@ footer .copyright p{
     color: #4A4A4A;
 }
 /* form */
-body.login{
+.login{
     background-image: url("../images/background-1.png");
     background-size: cover;
     background-position: center;
-    min-height: 100%;
+    min-height: 100vh;
     background-attachment: fixed;
 }
 
