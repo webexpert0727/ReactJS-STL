@@ -11,7 +11,7 @@ class Agent extends Component {
 
         <div className="container-fluid">
             
-            <Header />
+            <Header customClass="no-banner direct-remove"/>
            
         </div>
         <div className="">
@@ -38,7 +38,7 @@ class Agent extends Component {
                         <div className="input">
                             <input type="password" className="" placeholder="Phone" />
                         </div>
-                        <div className="clearfix gap" styles="margin-bottom: 4px"></div>
+                        <div className="clearfix gap" style={{marginBottom : "4px"}}></div>
                         <div className="input clearfix">
                             
                             <div className="col-sm-6" styles="padding: 0; padding-top: 10px;">
@@ -50,7 +50,7 @@ class Agent extends Component {
                                 <input type="submit" value="send" styles="width: 117px; height: 43px; line-height: 1.1" className="no-shadow no-margin button type-2 green text-uppercase " />
                             </div>
                         </div>
-                        <div className="clearfix gap" styles="margin-bottom: 5px;"></div>
+                        <div className="clearfix gap" style={{marginBottom : "5px"}}></div>
                         <div className="clearfix"></div>
                     </form>
                 </div>

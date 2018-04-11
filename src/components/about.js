@@ -107,7 +107,7 @@ class About extends Component {
                 <div>
                     <h2>Our partners</h2>
                 </div>
-                <div className="gap" styles={{marginTop : "33px"}}></div>
+                <div className="gap" style={{marginTop : "33px"}}></div>
                 <div className="blue-bg ">
                     <div className="inline-img text-center bottom-logo horizontal-img owl-carousel">
                         <div className="item">
@@ -128,7 +128,7 @@ class About extends Component {
                     </div>
                 </div>
                 <div className="clearfix"></div>
-                <div className="gap" styles="margin-top: 52px;"></div>
+                <div className="gap" styles={{marginTop : "52px;"}}></div>
                 <div>
                     <h2>Other companies</h2>
                 </div>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return (
-         <header className="menu-containter">
+         <header className={`menu-containter ${this.props.customClass}`}>
             <div className="logo">
                 <a href="/">
                     <img src="images/logo.png" alt="Share The Load" /> </a>

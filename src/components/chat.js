@@ -24,7 +24,7 @@ class Chat extends Component {
 
         </div>
         <div className="">
-            <div className="card-layout-1 chat-page no-padding-xs" styles="padding: 20px 30px 10px; margin-top: -200px; ">
+            <div className="card-layout-1 chat-page no-padding-xs" style={{"padding": "20px 30px 10px","marginTop": "-200px" }}>
                 <div className="container">
                     <div className="chat col-md-12">
                         <div className="hidden-md">

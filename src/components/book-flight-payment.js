@@ -28,7 +28,7 @@ class BookFlightPayment extends Component {
                             </div>
                             <div className="input-container">
                                  <label>To</label>
-                                <input type="text" name="" placeholder="San Francisco(SFO)" styles="min-width: 148px;" />
+                                <input type="text" name="" placeholder="San Francisco(SFO)" style={{minWidth: "148px"}} />
                             </div>
                             <div className="input-container">
                                  <label>Departing</label>

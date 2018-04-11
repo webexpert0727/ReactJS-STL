@@ -25,11 +25,11 @@ class BookHotelSelectHotel extends Component {
         </div>
 
         <div className="book-hotel-select_wrapper select-hotel">
-            <div className="card-layout-2 style-2" styles="overflow: hidden; margin-bottom: 10vw">
+            <div className="card-layout-2 style-2" style={{overflow: "hidden", marginBottom: "10vw"}}>
                 <div className="">
                     <div className="col-md-3 select-hotel-sidebar">
                         <aside>
-                            <div className="sidebar-block" styles="overflow: hidden; border: none;">
+                            <div className="sidebar-block" style={{overflow: "hidden", border: "none"}}>
                                 <form>
                                      <div className="currency_changer_wrapper">
                                         <div className="currency_selected">
@@ -159,11 +159,11 @@ class BookHotelSelectHotel extends Component {
                                                 <div className="hotel-name ">
                                                     <h2> Hotel Star</h2>
                                                     <div>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
                                                     </div>
                                                     <p>0.10 miles away . Le Marais -<br/> the Centre Pompidou </p> 
                                                 </div>  
@@ -191,11 +191,11 @@ class BookHotelSelectHotel extends Component {
                                                 <div className="hotel-name ">
                                                     <h2> Hotel Star</h2>
                                                     <div>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
-                                                        <i className="fa fa-star" style={{color:"#fdb608;"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
+                                                        <i className="fa fa-star" style={{color:"#fdb608"}}></i>
                                                     </div>
                                                     <p>0.10 miles away . Le Marais -<br/> the Centre Pompidou </p> 
                                                 </div>  
@@ -318,7 +318,6 @@ class BookHotelSelectHotel extends Component {
             </div>
         </div>
 
-        <FooterOther />
 
     </Main>
 		);

@@ -119,7 +119,7 @@ class BookFligh extends Component {
                                     <p>/ per person</p>
                                 </div>
                                 <div className="has-button">
-                                    <input type="submit" value="Book this flight" className="text-uppercase button type-2 round-5 no-margin no-shadow green-3" styles="height: 60px;" />
+                                    <input type="submit" value="Book this flight" className="text-uppercase button type-2 round-5 no-margin no-shadow green-3" style={{height: "60px"}} />
                                 </div>
                             </div>
                         </div>

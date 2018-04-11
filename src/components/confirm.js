@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Main from './layout/main';
+import MainCustomWrap from './layout/main-custom-wrap';
 import Header from './layout/header';
 import FooterOther from './layout/footer-other';
 
 class Confirm extends Component {
 	render() {
 		return (
-		<Main>
+            <MainCustomWrap customClass="main off-white-bg no-banner">
 
         <div className="container-fluid">
             <Header />
@@ -79,7 +79,7 @@ class Confirm extends Component {
 
         <FooterOther />
 
-    </Main>
+    </MainCustomWrap>
 		);
 	}
 }

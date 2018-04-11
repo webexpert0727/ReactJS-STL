@@ -13,8 +13,8 @@ class Agreement extends Component {
             <HeaderWhite />
         </div>
         <div className="container-fluid">
-            <div className="gap clearfix" styles="margin-bottom: 3px"></div>
-            <div className="sm-gap-80 text-center-xs" styles="padding: 0 50px;"><h3 className="plain-heading-2" styles="margin-top: 23px; margin-bottom: 0px;"> Agreement </h3></div>
+            <div className="gap clearfix" style={{marginBottom : "3px"}}></div>
+            <div className="sm-gap-80 text-center-xs" style={{padding : "0 50px"}}><h3 className="plain-heading-2" styles="margin-top: 23px; margin-bottom: 0px;"> Agreement </h3></div>
             <br/>
             <div className="white-bg round5">
                 <div className="agreement-text">

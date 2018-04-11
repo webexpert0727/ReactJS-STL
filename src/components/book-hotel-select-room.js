@@ -35,7 +35,7 @@ class BookHotelSelectRoom extends Component {
                                 <i className="fa fa-star fill"></i>
                             </p>
                         </div>
-                        <p className="address">0.10 miles away <i className="fa fa-circle" styles="font-size:8px;"></i> Le Marais - the Centre Pompidou </p>
+                        <p className="address">0.10 miles away <i className="fa fa-circle" style={{"fontSize":"8px"}}></i> Le Marais - the Centre Pompidou </p>
                         <div className="room-details">
                             <h4>Hotel Summary </h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
