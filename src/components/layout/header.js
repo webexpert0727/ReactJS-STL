@@ -5,7 +5,7 @@ class Header extends Component {
     return (
          <header class="menu-containter">
             <div class="logo">
-                <a href="index.html">
+                <a href="/">
                     <img src="images/logo.png" alt="Share The Load" /> </a>
             </div>
             <div class="menu">

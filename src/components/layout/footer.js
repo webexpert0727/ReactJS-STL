@@ -12,16 +12,16 @@ class Footer extends Component {
                                 <ul>
                                     <li class="profile">
                                       <img src="images/profile.png" />
-                                      <a href="profile.html">Sofia</a>
+                                      <a href="/profile">Sofia</a>
                                     </li>
                                     
                                 </ul>   
                                 <div class="col-xs-6 menu-links">
-                                    <span><a href="my-projects.html">My Projects </a></span>
-                                    <span><a href="funds.html">Founds</a></span>   
+                                    <span><a href="/my-projects">My Projects </a></span>
+                                    <span><a href="/funds">Founds</a></span>   
                                 </div>
                                 <div class="col-xs-6 menu-links">
-                                    <span> <a href="setting.html">Settings</a></span>
+                                    <span> <a href="/setting">Settings</a></span>
                                     <span> <a href="#">Logout</a></span>   
                                 </div>
                             </div>

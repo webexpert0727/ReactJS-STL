@@ -35,6 +35,13 @@ import BookFlightResults from './components/book-flight-results';
 import BookFlight from './components/book-flight';
 import BookFlightPassengers from './components/book-flight-passengers';
 import BookFlightPayment from './components/book-flight-payment';
+
+
+import BookHotelPayment from './components/book-hotel-payment';
+import BookHotelSelectHotel from './components/book-hotel-select-hotel';
+import BookHotelSelectRoom from './components/book-hotel-select-room';
+import BookHotel from './components/book-hotel';
+
 import Chat from './components/chat';
 import Confirm from './components/confirm';
 
@@ -73,6 +80,12 @@ class App extends Component {
           <Route path={"/book-flight"} component={BookFlight} />
           <Route path={"/book-flight-passengers"} component={BookFlightPassengers} />
           <Route path={"/book-flight-payment"} component={BookFlightPayment} />
+
+          <Route path={"/book-hotel"} component={BookHotel} />
+          <Route path={"/book-hotel-payment"} component={BookHotelPayment} />
+          <Route path={"/book-hotel-select-room"} component={BookHotelSelectRoom} />
+          <Route path={"/book-hotel-select-hotel"} component={BookHotelSelectHotel} />
+          
           <Route path={"/chat"} component={Chat} />
           <Route path={"/confirm"} component={Confirm} />
 
