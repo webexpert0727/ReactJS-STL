@@ -440,7 +440,7 @@ class Shop extends Component {
                                         </div>                                            
                                     </div>
                                 </div>
-                                <div className="detail-layout" styles="display: none;">
+                                <div className="detail-layout" style={{"display": "none"}}>
                                     <div className="product-layout-1">
                                         <div className="product-div">
                                             <div className="contain clearfix">
