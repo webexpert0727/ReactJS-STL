@@ -9,9 +9,7 @@ class About extends Component {
 		return (
 		<Main>
         <div className="container-fluid">
-        
            <Header />
-
             <div className="banner banner-about banner-small">
                 <div className="text text-center">
                     <h3>

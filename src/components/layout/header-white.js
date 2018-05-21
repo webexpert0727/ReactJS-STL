@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class HeaderWhite extends Component {
   render() {
     return (
@@ -59,9 +58,6 @@ class HeaderWhite extends Component {
             </div>
         </header>
     );
-  }
-  
+  } 
 }
-
-
 export default HeaderWhite;
