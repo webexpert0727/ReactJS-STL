@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Main from './layout/main';
 import Header from './layout/header';
 import FooterOther from './layout/footer-other';
@@ -8,18 +7,12 @@ class ContactUs extends Component {
 	render() {
 		return (
 		<Main>
-
         <div className="container-fluid">
             <Header />
-
             <div className="banner banner-contact banner-small  no-text-banner">
                 <div className="text text-center">
-                    <h3>
-                        
-                    </h3>
-                    <p>
-                        
-                    </p>
+                    <h3></h3>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -94,7 +87,6 @@ class ContactUs extends Component {
             </div>
         </div>
         <FooterOther />
-
     </Main>
 		);
 	}

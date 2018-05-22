@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from '../components/index';
@@ -11,6 +11,7 @@ import Trace from '../components/trace';
 import TrackFlight from '../components/track-flight';
 import Travel from '../components/travel';
 import ContactUs from '../components/contact-us';
+import ContactContainer from '../containers/ContactContainer/ContactContainer';
 import Funds from '../components/funds';
 import HintsAndTips from '../components/hints-and-tips';
 import Location from '../components/location';
@@ -55,7 +56,7 @@ const Routes = () => {
           <Route path={"/trace"} component={Trace} />
           <Route path={"/track-flight"} component={TrackFlight} />
           <Route path={"/travel"} component={Travel} />
-          <Route path={"/contact-us"} component={ContactUs} />
+          <Route path={"/contact-us"} component={ContactContainer} />
           <Route path={"/funds"} component={Funds} />
           <Route path={"/hints-and-tips"} component={HintsAndTips} />
           <Route path={"/location"} component={Location} />
