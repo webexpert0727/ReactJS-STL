@@ -19,8 +19,8 @@ import Login from '../components/login';
 import MyCart from '../components/my-cart';
 
 
-import PostProject from '../components/post-project';
-import MyProjects from '../components/my-projects';
+import PostProjectContainer from '../containers/PostProjectContainer/PostProjectContainer';
+import MyProjectsContainer from '../containers/MyProjectsContainer/MyProjectContainer';
 import ProductDetail from '../components/product-detail';
 import PrintShippingLabel from '../components/print-shipping-label';
 import Profile from '../components/profile';
@@ -63,8 +63,8 @@ const Routes = () => {
           <Route path={"/login"} component={Login} />
           <Route path={"/my-cart"} component={MyCart} />
 
-          <Route path={"/post-project"} component={PostProject} />
-          <Route path={"/my-projects"} component={MyProjects} />
+          <Route path={"/post-project"} component={PostProjectContainer} />
+          <Route path={"/my-projects"} component={MyProjectsContainer} />
           <Route path={"/product-detail"} component={ProductDetail} />
           <Route path={"/print-shipping-label"} component={PrintShippingLabel} />
           <Route path={"/profile"} component={Profile} />

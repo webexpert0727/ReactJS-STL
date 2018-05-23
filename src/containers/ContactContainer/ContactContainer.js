@@ -1,11 +1,7 @@
-import {
-    connect
-} from "react-redux";
-import {
-    reduxForm, reset
-} from "redux-form";
+import { connect } from "react-redux";
+import { reduxForm, reset } from "redux-form";
 import * as a from '../../actions/contactUs/actions';
-import ContactUs from '../../views/ContactUs/contact-us';
+import ContactUs from '../../views/ContactUs/ContactUs';
 
 const mapDispatchToProps = dispatch => ({
     addContact: (params) => dispatch(a.addContactUs(params)),

@@ -60,13 +60,11 @@ class ContactUs extends Component {
         )
     }
     onSubmit(values) {
-        console.log(values)
         const { addContact } = this.props;
         addContact(values);
     }
     render() {
         const { handleSubmit, submitting, pristine, notifications, isLoading } = this.props;
-        console.log(this.props)
         return (
             <Main>
                 <Notifications notifications={notifications}/>

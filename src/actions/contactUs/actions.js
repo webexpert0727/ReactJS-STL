@@ -1,5 +1,5 @@
 import Parse from 'parse';
-import {success, error} from 'react-notification-system-redux';
+import { success } from 'react-notification-system-redux';
 import * as a from './actionTypes';
 Parse.initialize("kgMoNAcxUBHJIo9KUVQqcjYOZvpZv4fR4pky1zJH", "je5obIpZemmDCQ1ivZqcZaj7vpUNVFQtvjElbpAi"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
 Parse.serverURL = "https://parseapi.back4app.com/";
