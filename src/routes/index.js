@@ -1,16 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from '../components/index';
-import About from '../components/about';
+import HomeContainer from '../containers/HomeContainer/HomeContainer';
+import AboutUsContainer from '../containers/AboutUsContainer/AboutUsContainer';
 import Agent from '../components/agent';
-import Agreement from '../components/agreement';
+import AgreementContainer from '../containers/AgreementContainer/AgreementContainer';
 import Shop from '../components/shop';
 import Signup from '../components/signup';
 import Trace from '../components/trace';
 import TrackFlight from '../components/track-flight';
 import Travel from '../components/travel';
-import ContactUs from '../components/contact-us';
 import ContactContainer from '../containers/ContactContainer/ContactContainer';
 import Funds from '../components/funds';
 import HintsAndTips from '../components/hints-and-tips';
@@ -21,11 +20,10 @@ import MyCart from '../components/my-cart';
 
 import PostProjectContainer from '../containers/PostProjectContainer/PostProjectContainer';
 import MyProjectsContainer from '../containers/MyProjectsContainer/MyProjectContainer';
-import ProductDetail from '../components/product-detail';
+import ProductDetailContainer from '../containers/ProjectsContainer/ProjectDetailsContainer';
 import PrintShippingLabel from '../components/print-shipping-label';
 import Profile from '../components/profile';
-import ProjectDetail from '../components/project-detail';
-import Projects from '../components/projects';
+import ProjectsContainer from '../containers/ProjectsContainer/ProjectsContainer';
 import Send from '../components/send';
 import Setting from '../components/setting';
 
@@ -47,10 +45,10 @@ import Confirm from '../components/confirm';
 const Routes = () => {
     return (
         <Switch>
-          <Route exact path={"/"} component={Home} />
-          <Route exact path={"/about"} component={About} />
+          <Route exact path={"/"} component={HomeContainer} />
+          <Route exact path={"/about"} component={AboutUsContainer} />
           <Route path={"/agent"} component={Agent} />
-          <Route path={"/agreement"} component={Agreement} />
+          <Route path={"/agreement"} component={AgreementContainer} />
           <Route path={"/shop"} component={Shop} />
           <Route path={"/signup"} component={Signup} />
           <Route path={"/trace"} component={Trace} />
@@ -65,11 +63,10 @@ const Routes = () => {
 
           <Route path={"/post-project"} component={PostProjectContainer} />
           <Route path={"/my-projects"} component={MyProjectsContainer} />
-          <Route path={"/product-detail"} component={ProductDetail} />
           <Route path={"/print-shipping-label"} component={PrintShippingLabel} />
           <Route path={"/profile"} component={Profile} />
-          <Route path={"/project-detail"} component={ProjectDetail} />
-          <Route path={"/projects"} component={Projects} />
+          <Route path={"/project-detail/:objectId"} component={ProductDetailContainer} />
+          <Route path={"/projects"} component={ProjectsContainer} />
           <Route path={"/send"} component={Send} />
           <Route path={"/setting"} component={Setting} />
 

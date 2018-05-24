@@ -3611,6 +3611,9 @@ aside.shop .range input[type="text"]{
     right: 0;
     /*! background: rgba(20,20,20,.6); */
 }
+.product-layout-3 .image-wrapper a {
+    position: relative;
+}
 .product-layout-3 .product-name p{
     font-family: Poppins;
     font-size: 15.0px;

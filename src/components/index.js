@@ -8,11 +8,8 @@ class Index extends Component {
 	render() {
 		return (
 		<Main>
-
         <div className="container-fluid">
-
         	<Header />
-
             <div className="banner has-form">
                 <div className="text">
                     <h3>

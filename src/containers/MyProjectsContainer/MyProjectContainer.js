@@ -6,7 +6,7 @@ const mapDispatchToProps = dispatch => ({
     fetchProjects:() => dispatch(a.fetchProjects()) 
 });
 const mapStateToProps = state => ({
-    ...state.projects
+    ...state.myProjects
 });
 const mergeProps = (state, actions, ownProps) => ({
     ...state,

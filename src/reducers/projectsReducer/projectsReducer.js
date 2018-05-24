@@ -1,10 +1,11 @@
-import * as a from '../../actions/myProjects/actionTypes';
-
+import _ from 'lodash';
+import * as a from '../../actions/projects/actionTypes';
 const INITIAL_STATE = {
     isLoading:false,
-    success:false,
     error:false,
-    projects:[]
+    success:false,
+    projects:[],
+    project:{}
 };
 
 /**
@@ -14,40 +15,42 @@ const INITIAL_STATE = {
 */
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case a.FETCH_MY_PROJECT_REQUEST:
+        case a.FETCH_PROJECTS_REQUEST:
             return {
                 ...state,
                 isLoading:true
             };
-        case a.FETCH_MY_PROJECT_SUCCESS:
-           return {
-               ...state,
-               isLoading:false,
-               success:false,
-               projects:action.payload
-           }
-        case a.FETCH_MY_PROJECT_FAILURE:
+        case a.FETCH_PROJECTS_SUCCESS:
+            return {
+                ...state,
+                isLoading:false,
+                success:true,
+                projects:action.payload
+            }
+        case a.FETCH_PROJECTS_FAILURE:
             return {
                 ...state,
                 isLoading:false,
                 error:true
             }
-        case a.ADD_POST_PROJECT_REQUEST:
+        case a.FETCH_PROJECT_DETAILS_REQUEST:
             return {
                 ...state,
                 isLoading:true
             }
-        case a.ADD_POST_PROJECT_SUCCESS:
-            return {
+        case a.FETCH_PROJECT_DETAILS_SUCCESS:
+            return{
                 ...state,
-                isLoading:false
+                isLoading:false,
+                success:true,
+                project:action.project
             }
-        case a.ADD_POST_PROJECT_FAILURE:
-            return {
+        case a.FETCH_PROJECT_DETAILS_FAILURE:
+            return{
                 ...state,
-                isLoading:false
+                isLoading:false,
+                error:true
             }    
-        default: 
-            return state;
+        default: return state;
     }
 };

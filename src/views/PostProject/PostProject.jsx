@@ -50,7 +50,6 @@ class PostProject extends Component {
     }
     render() {
         const { handleSubmit, submitting, pristine, notifications, isLoading } = this.props;
-        console.log(this.props)
         return (
             <Main>
                 <Notifications notifications={notifications}/>

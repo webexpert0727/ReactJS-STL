@@ -8,22 +8,19 @@ class Projects extends Component {
 	render() {
 		return (
 		<Main>
-
-        <div className="container-fluid">
-            <Header />
-
-            <div className="banner banner-project banner-small">
-                <div className="text text-center">
-                    <h3>
-                        
-                    </h3>
-                    <p>
-                        
-                    </p>
+            <div className="container-fluid">
+                <Header />
+                <div className="banner banner-project banner-small">
+                    <div className="text text-center">
+                        <h3>
+                            
+                        </h3>
+                        <p>
+                            
+                        </p>
+                    </div>
                 </div>
             </div>
-
-        </div>
         <div className="">
             <div className="card-layout-1 card-margin-style-1 projects-container">
                 <div className="container ">

@@ -2,11 +2,13 @@ import { combineReducers } from "redux";
 import { reducer as formReducer } from 'redux-form';
 import {reducer as notifications} from 'react-notification-system-redux';
 import contactReducer from './contactReducer/contactReducer';
-import projectsReducer from './projectsReducer/projectsReducer';
+import myProjectsReducer from './myProjectsReducer/myProjectsReducer';
+import projects from './projectsReducer/projectsReducer';
 
 const rootReducers = combineReducers({
     contact: contactReducer,
-    projects: projectsReducer,
+    myProjects: myProjectsReducer,
+    projects: projects,
     form: formReducer,
     notifications
 });
