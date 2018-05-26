@@ -4,12 +4,24 @@ import * as a from './actionTypes';
 Parse.initialize("kgMoNAcxUBHJIo9KUVQqcjYOZvpZv4fR4pky1zJH", "je5obIpZemmDCQ1ivZqcZaj7vpUNVFQtvjElbpAi"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
 Parse.serverURL = "https://parseapi.back4app.com/";
 
-export const fetchProjects = () => {
+export const fetchProjects = (params) => {
     return dispatch => {
         dispatch({
             type: a.FETCH_PROJECTS_REQUEST
         });
         const promise = new Parse.Query("Project");
+        if(!_.isEmpty(params)){
+            if(params.hasOwnProperty("price")){
+                const { price } = params;
+                promise.greaterThan("cost", price[0].toString());
+                promise.lessThan("cost", price[1].toString());
+            }
+            if(params.hasOwnProperty("weight")){
+                const { weight } = params;
+                promise.greaterThan("Weight", weight[0].toString());
+                promise.lessThan("Weight", weight[1].toString());
+            }
+        }
         promise.find().then(function(results) {
             const projects = [];
             if(!_.isEmpty(results)){
@@ -24,6 +36,7 @@ export const fetchProjects = () => {
                         address: project.get("address"),
                         height: project.get("height"),
                         lenght: project.get("lenght"),
+                        image: project.get('ProjectImage'),
                     })
                 })
             }

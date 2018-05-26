@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Dropzone from 'react-dropzone';
 import { Field } from 'redux-form'
 import Notifications from 'react-notification-system-redux';
 import BlockUi from "react-block-ui";
@@ -11,7 +12,9 @@ import FooterOther from '../../components/layout/footer-other';
 class PostProject extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            files:[]
+        };
         this.onSubmit = this.onSubmit.bind(this);
     }
     renderField(field) {
@@ -46,7 +49,13 @@ class PostProject extends Component {
     }
     onSubmit(values) {
         const { addProject, history } = this.props;
-        addProject(values,() => history.push("/my-projects"));
+        const valueWithFile = Object.assign(values,{file:this.state.files});
+        addProject(valueWithFile,() => history.push("/my-projects"));
+    }
+    onDrop(files) {
+        this.setState({
+          files
+        });
     }
     render() {
         const { handleSubmit, submitting, pristine, notifications, isLoading } = this.props;
@@ -155,8 +164,27 @@ class PostProject extends Component {
                                                 <div className="clearfix"></div>
                                             </div>
                                             <div className="col-md-6 text-center  post-project-container-2">
-                                                <p className="info low">Your current balance: <span className="amount low"> $ 19.00</span></p>
-                                                <p className="estimited">ESTIMATED COST:&nbsp;&nbsp;&nbsp;<span className="amount"><sup>$ </sup>37<sup> 00</sup></span></p>
+                                            <div className="dropzone">
+                                                <Dropzone 
+                                                    accept="image/jpeg, image/png"
+                                                    multiple={false}
+                                                    onDrop={this.onDrop.bind(this)} 
+                                                    style={{width:"100%",height:100,border:"1px dashed",display:"flex",alignItems:"center",justifyContent:"center"}}
+                                                >
+                                                    <p>Try dropping some files here, or click to select files to upload.</p>
+                                                </Dropzone>
+                                                <aside>
+                                                    <ul>
+                                                        {this.state.files.map(f => 
+                                                            <li key={f.name}>
+                                                                <img src={f.preview} alt={f.name} />
+                                                            </li>
+                                                        )}
+                                                    </ul>
+                                                </aside>
+                                            </div>
+                                        {/* {<p className="info low">Your current balance: <span className="amount low"> $ 19.00</span></p>
+                                        <p className="estimited">ESTIMATED COST:&nbsp;&nbsp;&nbsp;<span className="amount"><sup>$ </sup>37<sup> 00</sup></span></p>} */}
                                                 <div className="gap clearfix"></div>
                                                 <div className="gap clearfix hidden-sm hidden-xs" styles="margin-bottom: 24px;"></div>
                                                 <div>

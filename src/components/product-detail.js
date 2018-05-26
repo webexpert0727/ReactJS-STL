@@ -28,13 +28,10 @@ class ProductDetail extends Component {
             <div className="card-layout-1 card-map-container card-margin-style-1">
                 <div className="container  product-container has-padding">
                     <div className="row">
-                            
                         <div>
-                            
                         </div>
                         <div className="col-md-6">
                             <div className="zoom-gallary type-1">
-                                
                                 <div className="zoom-container col-sm-10 pull-right  custom-zoom-padding">
                                     <img src="images/product-image/wh-2.png" alt="" xoriginal="images/product-image/wh-2.png" className=" xzoom img-responsive center-block" />
                                 </div>
@@ -88,7 +85,6 @@ class ProductDetail extends Component {
                                 <br/>
                                 <a href="#" className="button type-1 grey text-uppercase">save</a> 
                                 <a href="#" className="button type-2 green  text-uppercase">Buy now</a> 
-
                             </div>
                         </div>
                     </div>

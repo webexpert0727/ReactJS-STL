@@ -2026,7 +2026,7 @@ h3.name, input.name {
     margin-left:  -16px;
 }
 .range{
-    padding: 0px 10px;
+    padding: 0px;
 }
 .ui-widget.ui-widget-content {
     border: none;

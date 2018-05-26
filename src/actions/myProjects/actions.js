@@ -41,6 +41,7 @@ export const fetchProjects = () => {
                             isAccepted: project.get("isAccepted"),
                             pickupAccepted: project.get("pickupAccepted"),
                             pickupRequested: project.get("pickupRequested"),
+                            image: project.get('ProjectImage'),
                             accepted: project.get("Accepted"),
                             completionCode: project.get("CompletionCode")
                         })
@@ -63,6 +64,7 @@ export const fetchProjects = () => {
 }
 
 export const addProject = (params,callBack) => {
+    console.log(params)
     return dispatch => {
         const currentUser = Parse.User.current();
         if(!_.isEmpty(currentUser)){
@@ -71,9 +73,19 @@ export const addProject = (params,callBack) => {
             });
             const Project = Parse.Object.extend("Project");
             const promise = new Project();
-            promise.save(Object.assign({},params,{
-                Posted:currentUser.id
-            })).then(() => {
+            let projectParams = Object.assign({},params,{
+                Posted:currentUser.id,
+            })
+            if(params.file){
+                const projectImages = params.file[0];
+                const parseFile = new Parse.File(projectImages.name, projectImages);
+                projectParams = Object.assign({},params,{
+                    Posted:currentUser.id,
+                    ProjectImage:parseFile
+                })
+            }
+            
+            promise.save(projectParams).then(() => {
                 dispatch({
                     type:a.ADD_POST_PROJECT_SUCCESS
                 });
@@ -82,7 +94,7 @@ export const addProject = (params,callBack) => {
                     title:"Success",
                     message:"Your project has been created successfully"
                 }));
-                callBack();
+               callBack();
             },(e) => {
                 dispatch({
                     type:a.ADD_POST_PROJECT_FAILURE,

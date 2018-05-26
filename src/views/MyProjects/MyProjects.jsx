@@ -6,6 +6,7 @@ import "react-block-ui/style.css";
 import Main from '../../components/layout/main';
 import Header from '../../components/layout/header';
 import FooterOther from '../../components/layout/footer-other';
+import defaultProjectImage from '../../assets/images/no-product.png';
 
 class MyProjects extends Component {
     constructor(props) {
@@ -54,26 +55,24 @@ class MyProjects extends Component {
                                                 <td></td>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <BlockUi
+                                        <BlockUi
                                                 tag="div"
                                                 blocking={isLoading}
                                             >
+                                            <tbody>
                                                 {
                                                     _.map(projects,(project) => {
-                                                        totals = (totals + project.cost);
+                                                        totals = (Number(totals) + Number(project.cost));
                                                         return (
-                                                            <tr>
+                                                            <tr key={project.objectId}>
                                                                 <td data-title="ADDED ITEM" className=" project-image">
-                                                                    <img src="images/pr-1.png" width="70px" height="70px" alt="" />
+                                                                    <img src={project.image ? project.image.url():defaultProjectImage} width="70px" height="70px" alt="" />
                                                                 </td>
                                                                 <td data-title="" className=" project-name">
-                                                                    <div>
                                                                         <p>
                                                                             {project.title}
                                                                             <span>{project.destination}</span>
                                                                         </p>
-                                                                    </div>
                                                                 </td>
                                                                 <td data-title="SIZE" className=" project-size">{project.height} X {project.lenght}</td>
                                                                 <td data-title="QUANTITY" className=" project-quentity">
@@ -88,8 +87,8 @@ class MyProjects extends Component {
                                                         )
                                                     })
                                                 }
-                                            </BlockUi>
-                                        </tbody>
+                                            </tbody>
+                                        </BlockUi>
                                         <tfoot>
                                             <tr className="total-tr">
                                                 <td colSpan="5"></td>

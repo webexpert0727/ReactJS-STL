@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Main from './layout/main';
 import Header from './layout/header';
 import FooterOther from './layout/footer-other';

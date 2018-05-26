@@ -3,7 +3,7 @@ import * as a from '../../actions/projects/actions';
 import Projects from '../../views/Projects/Projects';
 
 const mapDispatchToProps = dispatch => ({
-    fetchProjects:() => dispatch(a.fetchProjects()) 
+    fetchProjects:(params) => dispatch(a.fetchProjects(params)) 
 });
 const mapStateToProps = state => ({
     ...state.projects

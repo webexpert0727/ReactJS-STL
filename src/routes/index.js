@@ -9,7 +9,7 @@ import Shop from '../components/shop';
 import Signup from '../components/signup';
 import Trace from '../components/trace';
 import TrackFlight from '../components/track-flight';
-import Travel from '../components/travel';
+import Travel from '../containers/TravellerContainer/TravellerContainer';
 import ContactContainer from '../containers/ContactContainer/ContactContainer';
 import Funds from '../components/funds';
 import HintsAndTips from '../components/hints-and-tips';

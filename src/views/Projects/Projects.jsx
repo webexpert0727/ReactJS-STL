@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BlockUi from "react-block-ui";
 import "react-block-ui/style.css";
+import { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
 import Main from '../../components/layout/main';
 import Header from '../../components/layout/header';
 import FooterOther from '../../components/layout/footer-other';
@@ -11,15 +13,31 @@ import defaultProjectImage from '../../assets/images/no-product.png';
 class Projects extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {
+            price:[10,1000],
+            weight: [10,1000]
+        }
+        this.handlePriceSliderChange = this
+        .handlePriceSliderChange
+        .bind(this);
+        this.handleWeightSliderChange = this.handleWeightSliderChange.bind(this);
     }
     componentWillMount(){
         const { fetchProjects } = this.props;
         fetchProjects();
     }
+    handlePriceSliderChange(value) {
+        const { fetchProjects } = this.props;
+        this.setState({ price: value });
+        fetchProjects({price: value});
+    }
+    handleWeightSliderChange(value) {
+        const { fetchProjects } = this.props;
+        this.setState({ weight: value });
+        fetchProjects({weight: value});
+    }
     render() {
         const { projects, isLoading } = this.props;
-        
         return (
             <Main>
                 <div className="container-fluid">
@@ -40,18 +58,21 @@ class Projects extends Component {
                             <div className="projects-sidebar sidebar">
                                 <aside>
                                     <div className="accordian sidebar-block" >
-                                        <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-1">Distance</p>
+                                        <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-1">Price</p>
                                         <div className="collapse-containt collapse in" id="side-1">
                                             <div className="clearfix">
                                                 <div className="range clearfix " styles="padding-right: 0" >
+                                                    <input type="text" value={`$${this.state.price[0]}`} readOnly={true} className="pull-left" />
+                                                    <input type="text" value={`$${this.state.price[1]}`} readOnly={true} className="pull-right text-right" />
+                                                </div>
+                                                <Range
+                                                    min={10}
+                                                    max={1000}
+                                                    onChange={this.handlePriceSliderChange}
+                                                    allowCross={false}
+                                                    defaultValue={[10, 1000]}
+                                                />
                                                 
-                                                    <input type="text" id="distance-min" readOnly={true}className="pull-left" />
-                                                    <input type="text" id="distance-max" readOnly={true}className="pull-right text-right" />
-                                                    <br/> <br/>
-                                                </div>
-                                                <div className="range clearfix" id="distance">
-                                                    <br/>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -60,32 +81,20 @@ class Projects extends Component {
                                         <div className="collapse-containt collapse" id="side-2">
                                             <div className="clearfix">
                                                 <div className="range clearfix" >
-                                                    <input type="text" id="weight-min" readOnly={true} className="pull-left" />
-                                                    <input type="text" id="weight-max" readOnly={true}className="pull-right text-right" />
-                                                    <br/> <br/>
+                                                    <input type="text" value={`${this.state.weight[0]}cm`} readOnly={true} className="pull-left" />
+                                                    <input type="text" value={`${this.state.weight[1]}cm`} readOnly={true}className="pull-right text-right" />
+                                                    <br/><br/>
                                                 </div>
-                                                <div className="range clearfix" id="weight">
-                                                    <br/>
-                                                </div>
+                                                <Range
+                                                    min={10}
+                                                    max={1000}
+                                                    onChange={this.handleWeightSliderChange}
+                                                    allowCross={false}
+                                                    defaultValue={[10, 1000]}
+                                                />
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="accordian sidebar-block" styles="padding-top: 0;">
-                                        <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-3">Price</p>
-                                        <div className="collapse-containt collapse" id="side-3">
-                                            <div className="clearfix">
-                                                <div className="range clearfix" >
-                                                    <input type="text" id="range-min" readOnly={true}className="pull-left" />
-                                                    <input type="text" id="range-max" readOnly={true}className="pull-right text-right" />
-                                                    <br/> <br/>
-                                                </div>
-                                                <div className="range clearfix" id="price">
-                                                    <br/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
                                     <div className="gap"> </div>
                                 </aside>
                             </div>
@@ -104,7 +113,7 @@ class Projects extends Component {
                                                                 <div className="image-wrapper">
                                                                     <Link to={`/project-detail/${project.objectId}`}>
                                                                         <img 
-                                                                            src="images/product-img-1.png" 
+                                                                            src={project.image ? project.image.url():defaultProjectImage}
                                                                             alt={project.title}
                                                                             className="img-responsive center-block" 
                                                                         />
