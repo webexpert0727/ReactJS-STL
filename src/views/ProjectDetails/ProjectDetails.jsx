@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Main from '../../components/layout/main';
 import Header from '../../components/layout/header';
 import FooterOther from '../../components/layout/footer-other';
+import defaultProjectImage from '../../assets/images/no-product.png';
 
 class ProjectDetails extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class ProjectDetails extends Component {
                             <div className="col-md-6">
                                 <div className="zoom-gallary type-1">
                                     <div className="zoom-container col-md-12 pull-right">
-                                        <img src="images/product-image/bh-2.png" alt="" xoriginal="images/product-image/bh-2.png" className=" xzoom img-responsive center-block" />
+                                        <img src={project.image ? project.image.url():defaultProjectImage} alt="" xoriginal="images/product-image/bh-2.png" className=" xzoom img-responsive center-block" />
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@ class ProjectDetails extends Component {
                                 </div>
                                 <div className="text-right text-center-xs">
                                     <div className="gap clearfix hidden-sm hidden-xs" styles="margin-bottom: 27px;"></div>
-                                    {(project.cost > 0) && <a href="#" className="button type-2 green no-shadow text-uppercase">ACCEPT</a>}
+                                    {(project.cost > 0) && <a href="/#" className="button type-2 green no-shadow text-uppercase">ACCEPT</a>}
                                 </div>
                             </div>
                         </div>

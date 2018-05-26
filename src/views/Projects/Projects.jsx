@@ -72,7 +72,6 @@ class Projects extends Component {
                                                     allowCross={false}
                                                     defaultValue={[10, 1000]}
                                                 />
-                                                
                                             </div>
                                         </div>
                                     </div>

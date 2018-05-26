@@ -26,10 +26,11 @@ class Login extends Component {
         
     };
     login(userData){
+        const { history } = this.props;
         Parse.User.logIn(userData.userName, userData.password , {
             success: function(user) {
-                alert("User logged in successful with username: " + user.get("username") + ' and email: ' + user.get("email"));
-                // Do stuff after successful login, like a redirect.
+                //alert("User logged in successful with username: " + user.get("username") + ' and email: ' + user.get("email"));
+                history.push("/");
             },
             error: function(user, error) {
                 alert("The login failed with error: " + error.code + " " + error.message);

@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import Parse from 'parse';
 
+Parse.initialize("kgMoNAcxUBHJIo9KUVQqcjYOZvpZv4fR4pky1zJH", "je5obIpZemmDCQ1ivZqcZaj7vpUNVFQtvjElbpAi"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+Parse.serverURL = "https://parseapi.back4app.com/";
 class FooterOther extends Component {
+    logoutHandler = (e) => {
+        const { history } = this.props;
+        e.preventDefault();
+          Parse.User.logOut().then(() => {
+                history.push("/");
+              }
+            )
+    }
 	render() {
+        const currentUser = Parse.User.current();
 		return (
 		 <footer>
             <div className="container footer-container">
@@ -10,19 +23,20 @@ class FooterOther extends Component {
                         <ul>
                             <li>
                                 <img src="images/profile.png" />
-                                <a href="profile.html">Sofia</a>
+                                <Link to="profile.html">Sofia</Link>
                             </li>
                             <li>
-                                <a href="my-projects.html">My Projects </a>
+                                <Link to={"my-projects"}>My Projects </Link>
                             </li>
                             <li>
-                                <a href="funds.html">Founds</a>
+                                <Link to={"found"}>Founds</Link>
                             </li>
                             <li>
-                                <a href="setting.html">Settings</a>
+                                <Link to={"setting"}>Settings</Link>
                             </li>
                             <li>
-                                <a href="#">Logout</a>
+                                {currentUser && <a href="/#/" onClick={this.logoutHandler}>Logout</a>}
+                                {!currentUser && <a href="/#/login">Login</a>}
                             </li>
                         </ul>
                     </div>
@@ -38,4 +52,4 @@ class FooterOther extends Component {
 	}
 }
 
-export default FooterOther;
+export default withRouter(FooterOther);

@@ -1,12 +1,57 @@
 import React, { Component } from 'react';
+import { compose } from "recompose";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 import Main from '../../components/layout/main';
 import Header from '../../components/layout/header';
 import FooterOther from '../../components/layout/footer-other';
-
+const lacationArr = [
+    {lat:23.0049117,lng:72.5540815},
+    {lat:23.012145,lng:72.54962},
+    {lat:23.0044673,lng:72.5531159},
+]
+const MapWithAMarker = compose(
+    withScriptjs,
+    withGoogleMap
+  )(props =>
+    <GoogleMap
+      defaultZoom={13}
+      defaultCenter={{ lat: 23.0201818, lng: 72.4396542 }}
+    >
+     {
+        lacationArr.map((location,index) => {
+            return (
+                <Marker
+                    key={index}
+                    position={location}
+                />
+            )
+        })
+     }
+    </GoogleMap>
+  );
 class Travellers extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            price:[10,1000],
+            weight: [10,1000],
+            distance: [10,1000]
+        }
+        this.handlePriceSliderChange = this.handlePriceSliderChange.bind(this);
+        this.handleWeightSliderChange = this.handleWeightSliderChange.bind(this);
+        this.handleDistanceSliderChange = this.handleDistanceSliderChange.bind(this);
+    }
+    handlePriceSliderChange(value) {
+        this.setState({ price: value });
+    }
+    handleWeightSliderChange(value) {
+        this.setState({ weight: value });
+    }
+    handleDistanceSliderChange(value){
+        this.setState({ distance: value });
     }
     render() { 
         return (
@@ -26,27 +71,31 @@ class Travellers extends Component {
                             <aside>
                                 <div className="filter-reset">
                                     <h3>Filter
-                                        <a href="#" className="filter-reser-button pull-right">
+                                        {/* <a href="/#/" className="filter-reser-button pull-right">
                                             <img src="images/icons8-synchronize.png" />
-                                        </a>
+                                        </a> */}
                                     </h3>
                                 </div>
                                 <div className="accordian sidebar-block">
                                     <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-4">Price</p>
                                     <div className="collapse-containt collapse" id="side-4">
-                                        
-                                    <br/>
-                                    <br/>
-                                    <div className="clearfix">
-                                        <div className="range" id="price">
-                                            <div className="range-slider"> </div>
-                                            <input type="text" id="range-min" readOnly={true} className="pull-left" />
-                                            <input type="text" id="range-max" readOnly={true}className="pull-right text-right" />
+                                        <br/>
+                                        <div className="clearfix">
+                                            <div className="range">
+                                                <Range
+                                                    min={10}
+                                                    max={1000}
+                                                    onChange={this.handlePriceSliderChange}
+                                                    allowCross={false}
+                                                    defaultValue={[10, 1000]}
+                                                />
+                                                <input type="text" value={`$${this.state.price[0]}`} readOnly={true} className="pull-left" />
+                                                <input type="text" value={`$${this.state.price[1]}`} readOnly={true}className="pull-right text-right" />
+                                            </div>
                                         </div>
                                     </div>
-                                    </div>
                                 </div>
-                                <div className="accordian sidebar-block">
+                                {/* <div className="accordian sidebar-block">
                                     <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-1">Category</p>
                                     <div className="collapse-containt collapse in" id="side-1">
                                         <div className="sidebar-checkbox">
@@ -66,20 +115,21 @@ class Travellers extends Component {
                                             <label htmlFor="side-1-ch4">Category 3</label>
                                         </div>
                                     </div>
-                                </div>
-                                
+                                </div> */}
                                 <div className="accordian sidebar-block" >
                                         <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-1-ch7" >Distance</p>
                                         <div className="collapse-containt collapse in" id="side-1-ch7">
                                             <div className="clearfix">
-                                                <div className="range clearfix" >
-                                                
-                                                    <input type="text" id="distance-min" readOnly={true} className="pull-left" />
-                                                    <input type="text" id="distance-max" readOnly={true} className="pull-right text-right" />
-                                                    <br/> <br/>
-                                                </div>
-                                                <div className="range clearfix" id="distance">
-                                                    <br/>
+                                                <div className="range">
+                                                    <Range
+                                                        min={10}
+                                                        max={1000}
+                                                        onChange={this.handleDistanceSliderChange}
+                                                        allowCross={false}
+                                                        defaultValue={[10, 1000]}
+                                                    />
+                                                    <input type="text" value={`${this.state.distance[0]}`} readOnly={true} className="pull-left" />
+                                                    <input type="text" value={`${this.state.distance[1]}`} readOnly={true}className="pull-right text-right" />
                                                 </div>
                                             </div>
                                         </div>
@@ -87,33 +137,23 @@ class Travellers extends Component {
                                 <div className="accordian sidebar-block">
                                     <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-2">Weight</p>
                                     <div className="collapse-containt collapse " id="side-2">
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch1" />
-                                            <label htmlFor="side-2-ch1">All</label>
-                                        </div>
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch2" />
-                                            <label htmlFor="side-2-ch2">LG</label>
-                                        </div>
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch3" />
-                                            <label htmlFor="side-2-ch3">Logitek</label>
-                                        </div>
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch4" />
-                                            <label htmlFor="side-2-ch4">Apple</label>
-                                        </div>
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch5" />
-                                            <label htmlFor="side-2-ch5">Hp</label>
-                                        </div>
-                                        <div className="sidebar-checkbox">
-                                            <input type="checkbox" name="" id="side-2-ch6" />
-                                            <label htmlFor="side-2-ch6">Noc</label>
+                                        <br/>
+                                        <div className="clearfix">
+                                            <div className="range">
+                                                <Range
+                                                    min={10}
+                                                    max={1000}
+                                                    onChange={this.handleWeightSliderChange}
+                                                    allowCross={false}
+                                                    defaultValue={[10, 1000]}
+                                                />
+                                                <input type="text" value={`${this.state.weight[0]}cm`} readOnly={true} className="pull-left" />
+                                                <input type="text" value={`${this.state.weight[1]}cm`} readOnly={true}className="pull-right text-right" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="accordian sidebar-block">
+                                {/* <div className="accordian sidebar-block">
                                     <p className="collapse-heading sidebar-heading" data-toggle="collapse" data-target="#side-3">Query</p>
                                     <div className="collapse-containt collapse" id="side-3">
                                             <div className="sidebar-checkbox color">
@@ -165,11 +205,16 @@ class Travellers extends Component {
                                                 <label htmlFor="side-3-ch6"><span styles="background: #2c083a;"></span></label>
                                             </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </aside>
                         </div>
                         <div className="travel-main" styles="height: 100%;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d908224.4742712615!2d152.442389502102!3d-27.22693966709454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbrisbane+zoo!5e0!3m2!1sen!2sin!4v1516024611321" width="100%" height="100%" frameBorder="0" styles="border:0" allowFullScreen=""></iframe>
+                        <MapWithAMarker
+                            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places"
+                            loadingElement={<div style={{ height: `100%` }} />}
+                            containerElement={<div style={{ height: `683px` }} />}
+                            mapElement={<div style={{ height: `100%` }} />}
+                        />
                         </div>
                     </div>
                 </div>
