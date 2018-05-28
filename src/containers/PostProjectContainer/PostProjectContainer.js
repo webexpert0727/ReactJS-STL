@@ -12,6 +12,9 @@ const mapStateToProps = state => ({
 });
 const validate = values => {
     const errors = {}
+    if (!values.Title) {
+        errors.Title = 'Required'
+    }
     if (!values.destination) {
         errors.destination = 'Required'
     }
@@ -24,8 +27,14 @@ const validate = values => {
     if (!values.height) {
         errors.height = 'Required'
     }
-    if (!values.parcelWeight) {
-        errors.parcelWeight = 'Required'
+    if (!values.Weight) {
+        errors.Weight = 'Required'
+    }
+    if (!values.cost) {
+        errors.cost = 'Required'
+    }
+    if(!values.description){
+        errors.description = "Required"
     }
     return errors
 }

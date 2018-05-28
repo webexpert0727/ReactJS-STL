@@ -76,7 +76,7 @@ export const addProject = (params,callBack) => {
             let projectParams = Object.assign({},params,{
                 Posted:currentUser.id,
             })
-            if(params.file){
+            if(params.file.lenght > 0){
                 const projectImages = params.file[0];
                 const parseFile = new Parse.File(projectImages.name, projectImages);
                 projectParams = Object.assign({},params,{
@@ -84,7 +84,6 @@ export const addProject = (params,callBack) => {
                     ProjectImage:parseFile
                 })
             }
-            
             promise.save(projectParams).then(() => {
                 dispatch({
                     type:a.ADD_POST_PROJECT_SUCCESS

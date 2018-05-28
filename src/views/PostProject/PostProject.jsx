@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Dropzone from 'react-dropzone';
-import { Field } from 'redux-form'
+import { Field } from 'redux-form';
+import { FormGroup } from 'react-bootstrap';
 import Notifications from 'react-notification-system-redux';
 import BlockUi from "react-block-ui";
 import "react-block-ui/style.css";
@@ -19,11 +20,12 @@ class PostProject extends Component {
     }
     renderField(field) {
         const {
-            meta: {
-                touched,
-                error
-            }
+            meta: { touched, error, warning, active, submitFailed },
         } = field;
+        let validationState;
+        if (touched && error) {
+            validationState = "error";
+        }
         let fieldContent;
         switch (field.type) {
             case 'textarea':
@@ -42,8 +44,10 @@ class PostProject extends Component {
         }        
         return (
             <div className="input text-1">
-                <label htmlFor="">{field.label}</label>
-                {fieldContent}
+                <FormGroup validationState={validationState}>
+                    <label htmlFor="">{field.label}</label>
+                    {fieldContent}
+                </FormGroup>
             </div>
         )
     }

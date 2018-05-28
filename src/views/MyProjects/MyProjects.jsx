@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BlockUi from "react-block-ui";
 import "react-block-ui/style.css";
+import Notifications from 'react-notification-system-redux';
 import Main from '../../components/layout/main';
 import Header from '../../components/layout/header';
 import FooterOther from '../../components/layout/footer-other';
@@ -18,10 +19,11 @@ class MyProjects extends Component {
         fetchProjects();
     }
     render() {
-        const { projects,isLoading} = this.props;
+        const { projects, isLoading, notifications} = this.props;
         let totals = 0;
         return (
             <Main>
+                <Notifications notifications={notifications}/>
                <div className="container-fluid">
                     <Header />
                     <div className="banner banner-project banner-small  no-text-banner">
